@@ -178,6 +178,18 @@ p {
 }
 
 #show {
+.navbar a {
+  text-decoration: none;
+  color: #f7e7ce;
+  font-size: 1, 500rem;
+}
+section {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100);
