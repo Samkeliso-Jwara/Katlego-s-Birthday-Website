@@ -63,20 +63,12 @@
     </section>
     <main>
       <section id="hero">
-        <div class="kats-Picture">
-          <img src="../assets/katlegoSelie.jpg" alt="">
-        </div>
-<<<<<<< Updated upstream
-        <h2 class="underPicText">Hey you! have been invited to</h>
-        <br/>
-        <p><span>Katlego's</span> Birthday Celebration</p>
-=======
+        <div class="kats-Picture"></div>
         <p class="underPicText">Hey you have been invited to</p>
         <br />
         <p>Katlego's Birthday Celebration</p>
 >>>>>>> Stashed changes
       </section>
-
       <section id="aboutSec">
         <h2 class="About_sec">Who's Birthday???</h2>
         <br />
@@ -89,7 +81,6 @@
           odit nemo?
         </p>
       </section>
-
       <section id="theProgram">
         <div class="firstSpeaker">
           <h2 class="time">3:45 PM - 4:30 PM</h2>
@@ -160,6 +151,38 @@
     </main>
 
     <script src="/js/app.js"></script>
+    <script type="module">
+      // Y// Intersection Observer for showing hidden elements
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show"); // Fix class name from '#show' to 'show'
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+// Select all elements with class 'hidden'
+const hiddenElements = document.querySelectorAll(".hidden"); // Fix selector from '#hidden' to '.hidden'
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Toggle button functionality
+const toggleBtn = document.querySelector(".toggle-btn");
+const toggleBtnIcon = document.querySelector(".toggle-btn i");
+const dropDownMenu = document.querySelector(".dropdown-menu"); // Fix class name from '-dropdown-menu' to 'dropdown-menu'
+
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle("open");
+  const isOpen = dropDownMenu.classList.contains("open");
+
+  // Toggle button icon class
+  toggleBtnIcon.className = isOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark";
+};
+// our ES6 code here
+   </script>
+   
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
