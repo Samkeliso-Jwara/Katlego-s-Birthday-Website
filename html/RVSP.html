@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katlego's Birthday Party RSVP</title>
     <!-- Include Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/RSVP.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/RSVP.css" />
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script src="/js/RSVP.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="card animated">
-            <h1 class="text-2xl font-bold mb-4">RSVP for Katlego's Birthday Party</h1>
-            
-            <form id="rsvpForm" class="mb-4">
-                <label for="name" class="block text-gray-700">Your Name:</label>
-                <input type="text" id="name" name="name" class="w-full border p-2 rounded mb-2">
+      <div class="card animated">
+        <h1 class="text-2xl font-bold mb-4">
+          RSVP for Katlego's Birthday Party
+        </h1>
 
-                <label for="email" class="block text-gray-700">Your Email:</label>
-                <input type="email" id="email" name="email" class="w-full border p-2 rounded mb-4">
+        <form id="rsvpForm" class="mb-4">
+          <label for="name" class="block text-gray-700">Your Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full border p-2 rounded mb-2"
+          />
 
-                <label for="attendance" class="block text-gray-700">Will you attend?</label>
-                <select id="attendance" name="attendance" class="w-full border p-2 rounded mb-4">
-                    <option value="yes">Yes, I'll be there!</option>
-                    <option value="no">Sorry, can't make it.</option>
-                </select>
+          <label for="email" class="block text-gray-700">Your Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full border p-2 rounded mb-4"
+          />
 
-                <button type="button" onclick="submitRSVP()" class="bg-champagne text-white py-2 px-4 rounded">Confirm RSVP</button>
-            </form>
-            
-            <!-- Container for the generated QR code -->
-            <div id="qrcode" class="mb-4"></div>
-        </div>
+          <label for="attendance" class="block text-gray-700"
+            >Will you attend?</label
+          >
+          <select
+            id="attendance"
+            name="attendance"
+            class="w-full border p-2 rounded mb-4"
+          >
+            <option value="yes">Yes, I'll be there!</option>
+            <option value="no">Sorry, can't make it.</option>
+          </select>
+
+          <button
+            type="button"
+            onclick="submitRSVP()"
+            class="bg-champagne text-white py-2 px-4 rounded"
+          >
+            Confirm RSVP
+          </button>
+        </form>
+
+        <!-- Container for the generated QR code -->
+        <div id="qrcode" class="mb-4"></div>
+      </div>
     </div>
 
     <script>
-        // Smooth scroll to form on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.card').scrollIntoView({ behavior: 'smooth' });
-        });
+      // Smooth scroll to form on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".card").scrollIntoView({ behavior: "smooth" });
+      });
     </script>
-</body>
+  </body>
 </html>
