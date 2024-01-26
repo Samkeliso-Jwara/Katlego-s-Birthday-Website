@@ -27,7 +27,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   </head>
   <body>
-    <section>
+    <section id="hidden">
       <header>
         <div class="navbar">
           <div class="logo"><a href="#"><a><span>K</span>atlego's 21'st</a></div>
@@ -156,15 +156,15 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      entry.target.classList.add("show"); // Fix class name from '#show' to 'show'
+      entry.target.classList.add("#show"); // Fix class name from '#show' to 'show'
     } else {
-      entry.target.classList.remove("show");
+      entry.target.classList.remove("#show");
     }
   });
 });
 
 // Select all elements with class 'hidden'
-const hiddenElements = document.querySelectorAll(".hidden"); // Fix selector from '#hidden' to '.hidden'
+const hiddenElements = document.querySelectorAll("#hidden"); // Fix selector from '#hidden' to '.hidden'
 hiddenElements.forEach((el) => observer.observe(el));
 
 // Toggle button functionality
@@ -179,7 +179,6 @@ toggleBtn.onclick = function () {
   // Toggle button icon class
   toggleBtnIcon.className = isOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark";
 };
-our ES6 code here
    </script>
    
     <!-- jQuery -->
