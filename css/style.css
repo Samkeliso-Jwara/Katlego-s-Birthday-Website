@@ -1,9 +1,11 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
 
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box; /* Fix the typo: changed '0' to 'border-box' */
   font-family: "Open Sans", sans-serif;
   background-color: black;
   color: #d9c9b0;
@@ -18,8 +20,11 @@ li {
   list-style: none;
 }
 
-.navbar a:hover {
-  color: white;
+/* Navbar styles */
+.navbar a {
+  text-decoration: none;
+  color: #f7e7ce;
+  font-size: 1.5rem; /* Fix the typo: changed ',' to '.' */
 }
 
 .navbar a:hover {
@@ -49,7 +54,7 @@ header {
 
 .navbar .logo a {
   font-size: 24px;
-  font-family: Playfair + Display;
+  font-family: "Playfair Display"; /* Fix the font name */
   font-weight: 400;
   color: white;
 }
@@ -66,6 +71,7 @@ header {
   display: none;
 }
 
+/* Action button styles */
 .action-btn {
   background-color: #fbdfbb;
   color: #000;
@@ -74,26 +80,26 @@ header {
   border-radius: 5px;
   cursor: pointer;
   margin-right: 35px;
-  transition: scale 0.2 ease;
+  transition: transform 0.2s ease; /* Fix the property name: changed 'scale' to 'transform' */
 }
 
 .action-btn:hover {
-  scale: 1.05;
+  transform: scale(1.05);
   color: black;
 }
 
 .action-btn:active {
-  scale: 0.95;
+  transform: scale(0.95);
 }
 
-/* Dropdown Menu */
-dropdown-menu {
+/* Dropdown Menu styles */
+.dropdown-menu {
   position: absolute;
   right: 2rem;
   top: 60px;
   height: 0;
   width: 300px;
-  background: rgb(rgb(143, 112, 72), rgb(197, 185, 80), rgb(190, 149, 87));
+  background: linear-gradient(to right, #8f7058, #c5b940, #be9557);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
@@ -117,8 +123,9 @@ dropdown-menu {
   justify-content: center;
 }
 
+/* Section styles */
 section {
-  height: calc(100vh-60px);
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,6 +133,7 @@ section {
   text-align: center;
   color: #f7e7ce;
 }
+
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -148,28 +156,13 @@ section {
   }
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #f7e7ce;
-  font-size: 1, 500rem;
-}
-section {
-  display: grid;
-  place-items: center;
-  align-items: center;
-  min-height: 100vh;
-}
-#hidden {
+.hidden {
   opacity: 0;
-  transition: all 1s;
   filter: blur(5px);
-  transform: translateX(100%);
+  transform: translateX(-100);
+  transition: all 1s;
 }
-#show {
+
+.show {
   opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-.p {
-  color: #f7e7ce;
 }
