@@ -106,8 +106,6 @@ dropdown-menu {
 .dropdown-menu.open {
   height: 240px;
 }
-li {
-}
 
 .dropdown-menu li {
   padding: 0.7rem;
@@ -165,6 +163,10 @@ section {
   align-items: center;
   min-height: 100vh;
 }
+.kats-Picture img{
+  width: 40%;
+}
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
