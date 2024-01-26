@@ -22,8 +22,8 @@ li {
   color: white;
 }
 
-.navbar a:hover{
-    color: white;
+.navbar a:hover {
+  color: white;
 }
 
 header {
@@ -49,9 +49,9 @@ header {
 
 .navbar .logo a {
   font-size: 24px;
-    font-family: Playfair + Display;
-    font-weight: 400;
-    color: white;
+  font-family: Playfair + Display;
+  font-weight: 400;
+  color: white;
 }
 
 .navbar .links {
@@ -159,13 +159,13 @@ section {
   align-items: center;
   min-height: 100vh;
 }
-.hidden {
+#hidden {
   opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
   transition: all 1s;
+  filter: blur(5px);
+  transform: translateX(100%);
 }
-.show {
+#show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
@@ -173,4 +173,3 @@ section {
 .p {
   color: #f7e7ce;
 }
-.
