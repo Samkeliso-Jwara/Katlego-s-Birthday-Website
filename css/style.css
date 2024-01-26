@@ -25,6 +25,10 @@ li {
   color: white;
 }
 
+.navbar a:hover{
+    color: white;
+}
+
 header {
   position: relative;
   padding: 0 2rem;
@@ -44,6 +48,18 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
 }
+.navbar .logo a {
+    font-size: 24px;
+    font-family: Playfair + Display;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .navbar .logo span {
+    color: #fbdfbb;
+    font-family: "Poppins", sans-serif;
+    margin-left: 50px;
+  }
 
 .navbar .links {
   display: flex;
