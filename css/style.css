@@ -96,6 +96,8 @@ dropdown-menu {
 .dropdown-menu.open {
   height: 240px;
 }
+li {
+}
 
 .dropdown-menu li {
   padding: 0.7rem;
