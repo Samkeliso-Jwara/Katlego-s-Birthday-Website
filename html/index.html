@@ -27,7 +27,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   </head>
   <body>
-    <section>
+    <section id="hidden">
       <header>
         <div class="navbar">
           <div class="logo"><a href="#"><a><span>K</span>atlego's 21'st</a></div>
@@ -62,25 +62,26 @@
       </header>
     </section>
     <main>
-      <section id="hidden">
-        <div class="kats-Picture"></div>
+      <section id="hero">
+        <div class="kats-pic">
+          <img src="../assets/katlegoSelie.jpg" alt="Katlego">
+        </div>
         <p class="underPicText">Hey you have been invited to</p>
         <br />
-        <p>Katlego's Birthday Celebration</p>
+        <p class="bday-celeb">Katlego's Birthday Celebration</p>
+        
       </section>
-      <section id="hidden">
+
+      <section id="aboutSec">
         <h2 class="About_sec">Who's Birthday???</h2>
         <br />
         <h1>Katlego Molepo</h1>
-        <br />
+        <br/>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
-          facilis quaerat architecto sequi dignissimos aliquid, eaque voluptatem
-          quam debitis non unde neque. Nulla quisquam officia debitis quae unde
-          odit nemo?
+          Celebrating a milestone in the journey of life, Katlego Molepo is turning 21! As she gracefully steps into this new chapter, may the joy of the present and the promises of the future illuminate her path. Katlego is a remarkable individual, embodying resilience, kindness, and the spirit of adventure.
         </p>
       </section>
-      <section id="hidden"> 
+      <section id="theProgram">
         <div class="firstSpeaker">
           <h2 class="time">3:45 PM - 4:30 PM</h2>
           <br />
@@ -150,6 +151,37 @@
     </main>
 
     <script src="/js/app.js"></script>
+    <script type="module">
+      // Y// Intersection Observer for showing hidden elements
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("#show"); // Fix class name from '#show' to 'show'
+    } else {
+      entry.target.classList.remove("#show");
+    }
+  });
+});
+
+// Select all elements with class 'hidden'
+const hiddenElements = document.querySelectorAll("#hidden"); // Fix selector from '#hidden' to '.hidden'
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Toggle button functionality
+const toggleBtn = document.querySelector(".toggle-btn");
+const toggleBtnIcon = document.querySelector(".toggle-btn i");
+const dropDownMenu = document.querySelector(".dropdown-menu"); // Fix class name from '-dropdown-menu' to 'dropdown-menu'
+
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle("open");
+  const isOpen = dropDownMenu.classList.contains("open");
+
+  // Toggle button icon class
+  toggleBtnIcon.className = isOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark";
+};
+   </script>
+   
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
