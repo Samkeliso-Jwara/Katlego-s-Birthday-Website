@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -22,6 +22,10 @@ li {
   color: white;
 }
 
+.navbar a:hover{
+    color: white;
+}
+
 header {
   position: relative;
   padding: 0 2rem;
@@ -37,9 +41,17 @@ header {
   justify-content: space-between;
 }
 
+.navbar .logo span {
+  color: #fbdfbb;
+  font-family: "Poppins", sans-serif;
+  margin-left: 50px;
+}
+
 .navbar .logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 24px;
+    font-family: Playfair + Display;
+    font-weight: 400;
+    color: white;
 }
 
 .navbar .links {
@@ -55,15 +67,13 @@ header {
 }
 
 .action-btn {
-  background-color: #d9c9b0;
-  color: azure;
-  padding: 0.5rem 1rem;
+  background-color: #fbdfbb;
+  color: #000;
+  padding: 10px 20px;
   border: none;
-  outline: none;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
+  margin-right: 35px;
   transition: scale 0.2 ease;
 }
 
