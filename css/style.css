@@ -134,10 +134,37 @@ section {
   color: #f7e7ce;
 }
 
+.kats-pic img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: -1000px; /* Adjust the top margin to move the image up */
+}
+
+
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+h2{
+  font-size: 20rem; /* Adjust the font size as needed */
+  font-weight: 600; /* Adjust the font weight as needed */
+  color: #fbdfbb; /* Adjust the color as needed */
+  margin-bottom: 10px; /* Adjust the bottom margin as needed */
+  text-transform: uppercase; /* Convert the text to uppercase */
+  letter-spacing: 2px; /* Adjust the letter spacing as needed */
+}
+
+.bday-celeb {
+  max-width: 81rem;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center; /* Center the text within the paragraph */
+  display: block;
+}
+
+
 
 @media (max-width: 992px) {
   .navbar .links,
