@@ -50,11 +50,10 @@ header {
   margin-left: 50px;
 }
 
-.navbar .logo a {
-  font-size: 24px;
-  font-family: "Playfair Display", sans-serif; /* Fix the font name */
-  font-weight: 400;
-  color: white;
+.logo img {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
 }
 
 .navbar .links {
@@ -96,8 +95,6 @@ header {
   right: 2rem;
   top: 60px;
   height: 0;
-  width: 300px;
-  background: linear-gradient(to right, #8f7058, #c5b940, #be9557);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
@@ -137,7 +134,7 @@ section {
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-top: -1000px; /* Adjust the top margin to move the image up */
+  border-radius: 30px;
 }
 
 #hero h1 {
@@ -145,7 +142,7 @@ section {
   margin-bottom: 1rem;
 }
 h2 {
-  font-size: 20rem; /* Adjust the font size as needed */
+  font-size: 10rem; /* Adjust the font size as needed */
   font-weight: 600; /* Adjust the font weight as needed */
   color: #fbdfbb; /* Adjust the color as needed */
   margin-bottom: 10px; /* Adjust the bottom margin as needed */
