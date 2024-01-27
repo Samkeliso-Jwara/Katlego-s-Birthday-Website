@@ -44,17 +44,23 @@ header {
   justify-content: space-between;
 }
 
-.navbar .logo span {
+/* .navbar .logo span {
   color: #fbdfbb;
   font-family: "Poppins", sans-serif;
   margin-left: 50px;
-}
+} */
 
-.navbar .logo a {
+.navbar .logo {
   font-size: 24px;
   font-family: "Playfair Display", sans-serif; /* Fix the font name */
   font-weight: 400;
   color: white;
+}
+
+.logo img {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
 }
 
 .navbar .links {
