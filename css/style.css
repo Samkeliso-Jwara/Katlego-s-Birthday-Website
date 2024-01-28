@@ -1,6 +1,14 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+@font-face {
+  font-family: "malibu";
+  src: url(malibu-ring-maisfontes.dbb5/malibu-ring.ttf);
+}
 
+@font-face {
+  font-family: "Tan";
+  src: url(/css/TAN_-_MON_CHERI/Web/TAN-MONCHERI.ttf);
+}
 /* Reset styles */
 * {
   margin: 0;
@@ -9,6 +17,12 @@
   font-family: "Open Sans", sans-serif;
   background-color: black;
   color: #d9c9b0;
+  font-family: "malibu";
+}
+
+.time {
+  font-family: "Tan";
+  color: white;
 }
 
 body {
@@ -22,7 +36,7 @@ body {
 .navbar a {
   text-decoration: none;
   color: #f7e7ce;
-  font-size: 1.5rem; /* Fix the typo: changed ',' to '.' */
+  font-size: 2rem; /* Fix the typo: changed ',' to '.' */
 }
 
 .navbar a:hover {
@@ -73,11 +87,11 @@ header {
 
 /* Action button styles */
 .action-btn {
-  background-color: #fbdfbb;
+  background-color: #d9c9b0;
   color: #000;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   margin-right: 35px;
   transition: transform 0.2s ease; /* Fix the property name: changed 'scale' to 'transform' */
@@ -185,6 +199,7 @@ section {
 
 li,
 p {
+  font-family: "Tan";
   animation: fade linear both;
   animation-timeline: view();
   animation-range: entry 50% cover 50%;
