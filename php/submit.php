@@ -25,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $attendance_status = ($attendance == 'yes') ? 1 : 0;
 
     // SQL query to insert data into the 'attendance_records' table
-    $sql = "INSERT INTO attendance_records (name, email, attendance_status) VALUES ('$name', '$email', '$attendance_status')";
+    $sql = "INSERT INTO attendance_record (name, email, attendance_status) VALUES ('$name', '$email', '$attendance_status')";
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
-        echo "RSVP submitted successfully";
+        echo "<div style='font-size: 24px; text-align: center; color: #4CAF50; padding: 20px;'>RSVP submitted successfully!</div>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
