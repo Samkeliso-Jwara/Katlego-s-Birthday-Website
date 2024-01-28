@@ -8,27 +8,12 @@
     <title>Katlego's 21'st</title>
   </head>
   <body>
-    <section id="hidden">
-      <header>
-        <div class="navbar">
-          <div class="logo"><a href="#"><a><span>K</span>atlego's 21'st</a></div>
-          <ul class="links">
-            <li>
-              <a href="Index.html">Home</a>
-            </li>
-            <li>
-              <a href="gallery.html">Gallery</a>
-            </li>
-            <li>
-              <a href="About.html">About</a>
-            </li>
-          </ul>
-          <a href="/html/RVSP.html " class="action-btn">RSVP!!</a>
-          <div class="toggle-btn">
-            <i class="fa-duotone fa-bars"></i>
-          </div>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"> <img src="../assets/logo.gif" alt="Logo" /></a>
         </div>
-        <div class="dropdown-menu">
+        <ul class="links">
           <li>
             <a href="Index.html">Home</a>
           </li>
@@ -36,16 +21,33 @@
             <a href="gallery.html">Gallery</a>
           </li>
           <li>
-            <a href="About.html">About</a>
+            <a href="#aboutSec">About</a>
           </li>
-          <li><a href="/html/RVSP.html " class="action-btn">RSVP!!</a></li>
+        </ul>
+        <a href="/html/RVSP.html " class="action-btn">RSVP!!</a>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
         </div>
-      </header>
-    </section>
+      </div>
+      <div class="dropdown-menu">
+        <li>
+          <a href="Index.html">Home</a>
+        </li>
+        <li>
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li>
+          <a href="About.html">About</a>
+        </li>
+        <li><a href="/html/RVSP.html " class="action-btn">RSVP!!</a></li>
+      </div>
+    </header>
+
     <main>
+      
       <section class="hidden">
         <div class="kats-pic">
-          <img src="../assets/katSelfie.jpg" alt="Katlego" />
+          <img src="/Outlook-cx4h3suo.svg" alt="Katlego" />
         </div>
         <p class="underPicText">Hey you have been invited to</p>
         <br />
@@ -75,6 +77,7 @@
             <li>Welcome guests and registration.</li>
             <li>Background music and light refreshments</li>
           </div>
+          <br>
         </div>
         <div class="secondSpeaker">
           <h2 class="time">4:30 PM - 4:45 PM</h2>
@@ -84,15 +87,16 @@
             <li>MC introduces the event and sets the tone</li>
             <li>Mr Pule opens the ceremony with a prayer.</li>
           </div>
+          <br>
         </div>
         <div class="thirdSpeaker">
           <h2 class="time">5:00 PM - 5:20</h2>
-          <br />
           <h1 class="event">Starting of Speeches</h1>
           <div class="eventsList">
             <li>Toast to Katlego's 21 years of life</li>
             <li>Addition Speech from Oageng(cousin)</li>
           </div>
+          <br>
         </div>
         <div class="forthSpeaker">
           <h2 class="time">5:25 PM - 5:30 PM</h2>
@@ -101,8 +105,22 @@
           <div class="eventsList">
             <li>Sing Happy Birthday and take photos.</li>
           </div>
+          <br>
         </div>
-        <div class="fifthSpeaker"></div>
+        <div class="fifthSpeaker">
+          <h2 class="time">5:30 PM - 5:40 PM</h2>
+          <br />
+          <h2 class="event">Entertainment(Continuation of Speeches)</h2>
+          <div class="eventsList">
+            <li>Open mic for guests to share memories or well-wishes</li>
+            <li>Speech from Thembelihle Tshabalala (cousin)</li>
+            <li>Speech from Sam Molepo on behalf of Molepo family</li>
+            <li>
+              Speech from Bongani Nkomo and Junior Modisane (Best friends)
+            </li>
+          </div>
+          <br>
+        </div>
         <div class="sixthSpeaker">
           <h2 class="time">5:45 PM - 5:55 PM</h2>
           <br />
@@ -111,6 +129,7 @@
             <li>Speech from Mpho Molwele (Friend)</li>
             <li>Speech from Katlego Medupe (Friend from high school)</li>
           </div>
+          <br>
         </div>
         <div class="seventhSpeaker">
           <h2 class="time">6:15 PM - 6:30 PM</h2>
@@ -122,6 +141,7 @@
               Miss Katlego Molepo (Miss Party) gives out the vote of thanks
             </li>
           </div>
+          <br>
         </div>
         <div class="eightthSpeaker">
           <h2 class="time">6:30 PM</h2>
@@ -131,45 +151,45 @@
             <li>Transition to the evening party.</li>
             <li>Background music and light refreshments</li>
           </div>
+          <br>
+          <br><br><br>
         </div>
       </section>
     </main>
-
-    <script src="/js/app.js"></script>
-    <script type="module">
-      // Y// Intersection Observer for showing hidden elements
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("#show"); // Fix class name from '#show' to 'show'
-    } else {
-      entry.target.classList.remove("#show");
-    }
+    <script>
+  // Intersection Observer for showing hidden elements
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
   });
-});
 
-// Select all elements with class 'hidden'
-const hiddenElements = document.querySelectorAll("#hidden"); // Fix selector from '#hidden' to '.hidden'
-hiddenElements.forEach((el) => observer.observe(el));
+  // Select all elements with class 'hidden'
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
 
-// Toggle button functionality
-const toggleBtn = document.querySelector(".toggle-btn");
-const toggleBtnIcon = document.querySelector(".toggle-btn i");
-const dropDownMenu = document.querySelector(".dropdown-menu"); // Fix class name from '-dropdown-menu' to 'dropdown-menu'
+  // Toggle button functionality
+  const toggleBtn = document.querySelector(".toggle-btn");
+  const toggleBtnIcon = document.querySelector(".toggle-btn i");
+  const dropDownMenu = document.querySelector(".dropdown-menu");
 
-toggleBtn.onclick = function () {
-  dropDownMenu.classList.toggle("open");
-  const isOpen = dropDownMenu.classList.contains("open");
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle("open")
+    const isOpen = dropDownMenu.classList.contains("open")
 
-  // Toggle button icon class
-  toggleBtnIcon.className = isOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark";
-};
-   </script>
-   
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    // Toggle button icon class
+    toggleBtnIcon.className = isOpen
+      ? "fa-solid fa-xmark"
+      :"fa-solid fa-bars"
+       
+  };
+</script>
+
+    </script>
   </body>
 </html>

@@ -9,6 +9,13 @@
   font-family: "Tan";
   src: url(/css/TAN_-_MON_CHERI/Web/TAN-MONCHERI.ttf);
 }
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
 /* Reset styles */
 * {
   margin: 0;
@@ -30,13 +37,15 @@ body {
   color: aqua;
   line-height: 1.5;
   font-size: clamp(1.125rem, 2vw, 1.25rem);
+  display: grid;
+  align-items: center;
 }
 
 /* Navbar styles */
 .navbar a {
   text-decoration: none;
   color: #f7e7ce;
-  font-size: 2rem; /* Fix the typo: changed ',' to '.' */
+  font-size: 1rem; /* Fix the typo: changed ',' to '.' */
 }
 
 .navbar a:hover {
@@ -65,9 +74,8 @@ header {
 } */
 
 .navbar .logo a {
-  font-size: 24px;
-  font-family: "Playfair Display", sans-serif; /* Fix the font name */
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: white;
 }
 
@@ -94,43 +102,64 @@ header {
 
 /* Action button styles */
 .action-btn {
-  background-color: #d9c9b0;
-  color: #000;
-  padding: 10px 20px;
+  background-color: #4d3f2a;
+  color: #fff;
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 10px;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
   cursor: pointer;
-  margin-right: 35px;
-  transition: transform 0.2s ease; /* Fix the property name: changed 'scale' to 'transform' */
+  font-weight: bold;
 }
 
 .action-btn:hover {
-  transform: scale(1.05);
-  color: black;
+  scale: 1.05;
+  color: white;
 }
 
 .action-btn:active {
-  transform: scale(0.95);
+  scale: 0.95;
 }
 
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar.toggle-btn {
+    display: blocks;
+  }
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+.dropdown-menu.open {
+  height: 240px;
+  opacity: 1;
+  visibility: visible;
+  background-color: #fff;
+}
 /* Dropdown Menu styles */
 .dropdown-menu {
+  display: none;
   position: absolute;
   right: 2rem;
   top: 60px;
   height: 0;
+  width: 300px;
+  background: rgba(225, 225, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  opacity: 0; /* Add opacity property */
-  visibility: hidden; /* Add visibility property */
-}
-
-.dropdown-menu.open {
-  height: 240px;
-  opacity: 1; /* Show the menu by changing opacity */
-  visibility: visible; /* Make the menu visible */
 }
 
 .dropdown-menu li {
@@ -155,6 +184,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 
 .toggle-btn i {
@@ -163,12 +193,10 @@ header {
 
 /* Section styles */
 section {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #f7e7ce;
   min-height: 100vh;
 }
 
@@ -177,7 +205,7 @@ section {
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-top: -1000px; /* Adjust the top margin to move the image up */
+  /* margin-top: -1000px; Adjust the top margin to move the image up */
 }
 
 #hero h1 {
@@ -206,23 +234,6 @@ section {
   display: block;
 }
 
-@media (max-width: 992px) {
-  .navbar .links,
-  .navbar .action-btn {
-    display: none;
-  }
-  .navbar .toggle-btn {
-    display: block;
-  }
-}
-
-@media (max-width: 576px) {
-  .dropdown-menu {
-    left: 2rem;
-    width: unset;
-  }
-}
-
 li,
 p {
   font-family: "Tan";
@@ -231,7 +242,7 @@ p {
   animation-range: entry 50% cover 50%;
 }
 
-/* h1 {
+h1 {
   background: linear-gradient(90deg, black, transparent);
   background-size: 200%;
   animation: reveal both linear;
@@ -241,7 +252,7 @@ p {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-} */
+}
 
 @keyframes fade {
   from {
@@ -266,22 +277,9 @@ p {
   color: #f7e7ce;
   font-size: 1, 500rem;
 }
-/* section {
-  display: grid;
-  place-items: center;
-  align-items: center;
-  min-height: 100vh;
-} */
 
 footer {
   background-color: #feedaa;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-footer {
-  background-color: #5d5c5b;
   color: #fff;
   padding: 20px;
   text-align: center;
