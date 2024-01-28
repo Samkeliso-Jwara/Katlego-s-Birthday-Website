@@ -58,10 +58,17 @@ header {
   justify-content: space-between;
 }
 
-.navbar .logo span {
+/* .navbar .logo span {
   color: #fbdfbb;
   font-family: "Poppins", sans-serif;
   margin-left: 50px;
+} */
+
+.navbar .logo a {
+  font-size: 24px;
+  font-family: "Playfair Display", sans-serif; /* Fix the font name */
+  font-weight: 400;
+  color: white;
 }
 
 .logo img {
@@ -116,10 +123,14 @@ header {
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0; /* Add opacity property */
+  visibility: hidden; /* Add visibility property */
 }
 
 .dropdown-menu.open {
   height: 240px;
+  opacity: 1; /* Show the menu by changing opacity */
+  visibility: visible; /* Make the menu visible */
 }
 
 .dropdown-menu li {
@@ -129,10 +140,25 @@ header {
   justify-content: center;
 }
 
+.dropdown-menu a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
 .dropdown-menu .action-btn {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
 }
 
 /* Section styles */
@@ -151,7 +177,7 @@ section {
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 30px;
+  margin-top: -1000px; /* Adjust the top margin to move the image up */
 }
 
 #hero h1 {
@@ -176,7 +202,7 @@ section {
   max-width: 81rem;
   margin: auto;
   margin-bottom: 20px;
-  text-align: center; /* Center the text within the paragraph */
+  text-align: center;
   display: block;
 }
 
@@ -249,6 +275,13 @@ p {
 
 footer {
   background-color: #feedaa;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #5d5c5b;
   color: #fff;
   padding: 20px;
   text-align: center;
