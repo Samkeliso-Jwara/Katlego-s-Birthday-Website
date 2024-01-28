@@ -20,7 +20,7 @@
           RSVP for Katlego's Birthday Party
         </h1>
 
-        <form id="rsvpForm" class="mb-4" action="process_rsvp.php" method="post">
+        <form id="rsvpForm" class="mb-4" action="/php/submit.php" method="post">
           <label for="name" class="block text-gray-700">Your Name:</label>
           <input
             type="text"
@@ -50,7 +50,7 @@
           </select>
 
           <button
-            type="button"
+            type="submit"
             onclick="submitRSVP()"
             class="bg-champagne text-white py-2 px-4 rounded"
           >
