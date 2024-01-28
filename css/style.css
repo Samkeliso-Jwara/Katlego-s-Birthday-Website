@@ -123,7 +123,6 @@ header {
 
 /* Section styles */
 section {
-  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,7 +149,7 @@ section {
   opacity: 0;
   filter: blur(10px);
   transform: translateX(-100%);
-  transition: all 3.3s;
+  transition: all 2.1s;
 }
 
 .show {
@@ -232,3 +231,10 @@ p {
   align-items: center;
   min-height: 100vh;
 } */
+
+footer {
+  background-color: #feedaa;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
