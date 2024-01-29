@@ -1,0 +1,26 @@
+            - name: IONOS-Deploy
+  # You may pin to the exact commit or the version.
+  # uses: ionos-deploy-now/deploy-to-ionos-action@e77742b4e1d0a3bec52b0cb346da05b6d76ca23a
+  uses: ionos-deploy-now/deploy-to-ionos-action@v1.4.8
+  with:
+    # The host of the IONOS Deploy Now API to retrieve necessary data about the current project
+    service-host: 
+    # API Key used for authentication and authorization of the IONOS Deploy Now API
+    api-key: 
+    # IONOS Deploy Now projectId, used to identify current project for which data is retrieved
+    project: 
+    # IONOS Deploy Now branchId, used to identify current branch of the project for which data is retrieved
+    branch-id: 
+    # Root directory which is deployed to the IONOS infrastructure
+    dist-folder: 
+    # Files that contain runtime placeholders
+    runtime-placeholder-files: # optional
+    # Deprecated. This value is no longer used by the action. We just keep it to prevent github form showing warnings for existing projects which still pass those values
+    bootstrap-deploy: # optional
+    # Deprecated. This value is no longer used by the action. We just keep it to prevent github form showing warnings for existing projects which still pass those values
+    remote-host: # optional
+    # Deprecated. This value is no longer used by the action. We just keep it to prevent github form showing warnings for existing projects which still pass those values
+    storage-quota: # optional
+    # 
+    workspace: # optional, default is '${{ github.workspace }}/'
+          
