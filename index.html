@@ -69,6 +69,10 @@
       </section>
 
       <section class="hidden">
+        <h1 class="programme">
+          The Event Programme
+        </h1>
+        <br>s
         <div class="firstSpeaker">
           <h2 class="time">3:45 PM - 4:30 PM</h2>
           <br />
@@ -155,6 +159,35 @@
           <br><br><br>
         </div>
       </section>
+      <section class="hidden">
+        <div class="take_note">
+          <h1 class="theme">Theme</h1><br>
+          <p>White With A Hint/Touch of <span>Champagne Pink</span></p>
+          <div class="location">
+            <br><br>
+            <h1>Where's The Party??? </h1><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.410853781602!2d27.8975279!3d-26.2158367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a0c6f61f8b19%3A0x7cf2e0676ab7be0!2s182%20Mmanotshe%20St%2C%20Meadowlands%20East%20Zone%202%2C%20Meadowlands%20East%2C%201852!5e0!3m2!1sen!2sza!4v1706534692775!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p>Gifts Are Preffered</p><br>
+          <p>Please BOB!</p><br>
+        </div>
+      </div>
+    </section>
+    <section class="hidden">
+      <div class="timer">
+        <br>
+        <H1>
+          <span>K</span> atlego's  <br> <span> Party </span>
+        </H1><br>
+        <h2>CountDown</h2><br>
+        <p id="demo"></p>
+      </div>
+      <button id="playPauseBtn" onclick="togglePlayPause()">Play</button>
+      <audio id="audioPlayer" autoplay volume="0.3">
+        <source src="/assets/DJ-Kent-Mo-T-ft-M-rda-Brenden-Praise-Horns-In-The-Sun-Thakzin-Remix-.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    </section>
     </main>
   <script>
   // Intersection Observer for showing hidden elements
@@ -185,8 +218,63 @@
           ? "fa-solid fa-xmark"
           : "fa-solid fa-bars";
   };
-</script>
+  // Set the date we're counting down to
+var countDownDate = new Date("Feb 4, 2024 15:37:25").getTime();
 
-    </script>
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Makhube Njalo!!!!";
+  }
+}, 1000);
+// Get the audio element
+var audio = document.getElementById("audioPlayer");
+
+// Set the initial volume to 30%
+audio.volume = 0.1;
+
+// Function to toggle mute/unmute
+// function toggleMute() {
+//     audio.muted = !audio.muted;
+// }
+
+// Function to stop audio
+function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0;
+}
+var audio = document.getElementById("audioPlayer");
+    var playPauseBtn = document.getElementById("playPauseBtn");
+
+    function togglePlayPause() {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = "Play";
+        }
+    }
+  </script>
+
   </body>
 </html>
