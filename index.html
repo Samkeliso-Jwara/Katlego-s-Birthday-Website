@@ -11,35 +11,35 @@
     <header>
       <div class="navbar">
         <div class="logo">
-          <a href="#"> <img src="../assets/logo.gif" alt="Logo" /></a>
+          <a href="#"> <img src="../assets/logo.gif"/></a>
         </div>
         <ul class="links">
           <li>
-            <a href="Index.html">Home</a>
+            <a href="/index.html">Home</a>
           </li>
           <li>
-            <a href="gallery.html">Gallery</a>
+            <a href="/html/gallery.html">Gallery</a>
           </li>
           <li>
             <a href="#aboutSec">About</a>
           </li>
         </ul>
-        <a href="/html/RVSP.html " class="action-btn">RSVP!!</a>
-        <div class="toggle-btn">
+        <a href="/html/RVSP.html " class="action_btn">RSVP!!</a>
+        <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
-      <div class="dropdown-menu">
+      <div class="dropdown_menu">
         <li>
           <a href="Index.html">Home</a>
         </li>
         <li>
-          <a href="gallery.html">Gallery</a>
+          <a href="/html/gallery.html">Gallery</a>
         </li>
         <li>
           <a href="About.html">About</a>
         </li>
-        <li><a href="/html/RVSP.html " class="action-btn">RSVP!!</a></li>
+        <li><a href="/html/RVSP.html " class="action_btn">RSVP!!</a></li>
       </div>
     </header>
 
@@ -156,37 +156,34 @@
         </div>
       </section>
     </main>
-    <script>
+  <script>
   // Intersection Observer for showing hidden elements
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
     });
-  });
 
   // Select all elements with class 'hidden'
   const hiddenElements = document.querySelectorAll(".hidden");
   hiddenElements.forEach((el) => observer.observe(el));
 
-  // Toggle button functionality
-  const toggleBtn = document.querySelector(".toggle-btn");
-  const toggleBtnIcon = document.querySelector(".toggle-btn i");
-  const dropDownMenu = document.querySelector(".dropdown-menu");
+  const toggleBtn = document.querySelector(".toggle_btn");
+  const toggleBtnIcon = document.querySelector(".toggle_btn i");
+  const dropDownMenu = document.querySelector(".dropdown_menu");
 
   toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle("open")
-    const isOpen = dropDownMenu.classList.contains("open")
+    dropDownMenu.classList.toggle("open");
+    const isOpen = dropDownMenu.classList.contains("open");
 
-    // Toggle button icon class
-    toggleBtnIcon.className = isOpen
-      ? "fa-solid fa-xmark"
-      :"fa-solid fa-bars"
-       
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
   };
 </script>
 

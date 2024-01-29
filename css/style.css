@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Tan";
-  src: url(/css/TAN_-_MON_CHERI/Web/TAN-MONCHERI.ttf);
+  src: url(/css/TAN_-_MON_CHERI/TAN-MON\ CHERI.otf);
 }
 
 section {
@@ -16,7 +16,11 @@ section {
   align-content: center;
   min-height: 100vh;
 }
-/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +43,14 @@ body {
   font-size: clamp(1.125rem, 2vw, 1.25rem);
   display: grid;
   align-items: center;
+}
+
+li,
+p {
+  list-style: none;
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
 }
 
 /* Navbar styles */
@@ -65,6 +77,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Tan";
+}
+div.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
 }
 
 /* .navbar .logo span {
@@ -139,58 +157,128 @@ header {
 @media (max-width: 576px) {
   .dropdown-menu {
     left: 2rem;
-    width: unset;
   }
 }
-.dropdown-menu.open {
-  height: 240px;
-  opacity: 1;
-  visibility: visible;
-  background-color: #fff;
-}
+
 /* Dropdown Menu styles */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 2rem;
-  top: 60px;
-  height: 0;
-  width: 300px;
-  background: rgba(225, 225, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 10px;
-  overflow: hidden;
+
+body {
+  height: 100vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
 }
 
-.dropdown-menu li {
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: orange;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 60%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+.action_btn:active {
+  scale: 0.95;
+}
+.dropdown_menu {
+  display: none;
+  /* position: absolute; */
+  float: right;
+  top: 30px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 255);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #000;
+  font-family: "Tan";
+}
+
+.dropdown_menu.open {
+  height: 240px;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+.dropdown_menu li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 1rem;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-  background-color: #555;
-}
-.dropdown-menu .action-btn {
+.dropdown_menu.action_btn {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  font-family: "Tan";
 }
 
-.toggle-btn i {
-  font-size: 1.5rem;
-}
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
 
+  .dropdown_menu {
+    display: block;
+  }
+}
 /* Section styles */
 section {
   flex-direction: column;
@@ -225,6 +313,18 @@ section {
   filter: blur(0);
   transform: translateX(0);
 }
+.navbar a {
+  text-decoration: none;
+  color: #f7e7ce;
+  font-size: 1, 500rem;
+}
+
+footer {
+  background-color: #feedaa;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
 .bday-celeb {
   max-width: 81rem;
@@ -242,7 +342,7 @@ p {
   animation-range: entry 50% cover 50%;
 }
 
-h1 {
+/* h1 {
   background: linear-gradient(90deg, black, transparent);
   background-size: 200%;
   animation: reveal both linear;
@@ -252,7 +352,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-}
+} */
 
 @keyframes fade {
   from {
@@ -270,17 +370,4 @@ h1 {
   to {
     background-position-x: 0%;
   }
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #f7e7ce;
-  font-size: 1, 500rem;
-}
-
-footer {
-  background-color: #feedaa;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
 }

@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+@font-face {
+  font-family: "malibu";
+  src: url(malibu-ring-maisfontes.dbb5/malibu-ring.ttf);
+}
 
+@font-face {
+  font-family: "Tan";
+  src: url(/css/TAN_-_MON_CHERI/TAN-MON\ CHERI.otf);
+}
 body {
   background-color: black;
   color: #fee1a5;
@@ -36,7 +44,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
   max-width: 100;
-  background-color: #5d5c5b;
+  background-color: black;
 }
 
 .logo {
