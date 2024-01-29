@@ -25,6 +25,7 @@
   background-color: black;
   color: #d9c9b0;
   font-family: "malibu";
+  scroll-snap-type: y mandatory;
 }
 
 .time {
