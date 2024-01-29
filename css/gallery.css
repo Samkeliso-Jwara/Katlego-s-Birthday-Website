@@ -49,14 +49,14 @@ body {
 
 .logo {
   font-size: 24px;
-  font-family: Playfair + Display;
+  font-family: "Tan";
   font-weight: 400;
   color: white;
 }
 
 .logo span {
   color: #fbdfbb;
-  font-family: "Poppins", sans-serif;
+  font-family: "malibu";
   margin-left: 50px;
 }
 
@@ -68,6 +68,17 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-right: 35px;
+  font-family: "Tan";
+}
+.home button:hover {
+  background-color: #fee1a5;
+  color: grey;
+  padding: 10px 20px;
+  border: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: larger;
+  font-family: "Tan";
 }
 
 .home a {
